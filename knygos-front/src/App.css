@@ -1,0 +1,185 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.nav-img {
+  max-width: 20em;
+}
+
+/* .navbar-light.navbar-nav.nav-link.active {
+  font-size: 1rem;
+} */
+
+
+.adm_warningmsg {
+  display: block;
+  float: right;
+  color: rgb(134, 37, 37);
+  font-size: 12px;
+} 
+
+.warningmsg {
+  position: absolute;
+  float: right;
+  color: rgb(220, 2, 2);
+  font-size: 17px;
+  top: 40px;
+  right: -17px;
+}
+
+.warningmsg2 {
+  width: 100%;
+  display: block;
+  text-align: right;
+  color: rgb(134, 37, 37);
+  font-size: 12px;
+}
+
+.fieldRequired {
+  color: red;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  vertical-align: text-top;
+  margin-top: 20px;
+}
+
+.current {
+  color:black !important;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  font-weight: 700;
+  font-size:x-large
+}
+
+.nav1 {
+  font-weight: 600;
+  font-size:x-large;
+}
+
+.mynav1{
+  width: 100%;
+  flex-wrap: wrap;
+  flex-direction: row;
+  position: relative;
+  justify-content: 'center';
+}
+
+.approvemsg {
+  position: absolute;
+  float: right;
+  color: rgb(67, 165, 32);
+  font-size: 17px;
+  top: 39px;
+  right: -19px;
+}
+
+.dishMsgTrue {
+  position: relative;
+  float: right;
+  color: rgb(67, 165, 32);
+  font-size: 17px;
+  top: -17%;
+  right: 40%;
+}
+
+.dishMsgFalse {
+  position: relative;
+  float: right;
+  color: rgb(220, 2, 2);
+  font-size: 17px;
+  top: -17%;
+  right: 40%;
+}
+
+.descMsgTrue {
+  position: relative;
+  float: right;
+  color: rgb(67, 165, 32);
+  font-size: 17px;
+  top: -43%;
+  right: 32%;
+}
+
+.descMsgFalse {
+  position: relative;
+  float: right;
+  color: rgb(220, 2, 2);
+  font-size: 17px;
+  top: -43%;
+  right: 32%;
+}
+
+.imageapprovemsg {
+  position: absolute;
+  color: rgb(67, 165, 32);
+  font-size: 17px;
+  top: 7px;
+  right: 5px;
+}
+
+.imagewarningmsg {
+  position: absolute;
+  color: rgb(220, 2, 2);
+  font-size: 17px;
+  top: 8px;
+  right: 7px;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.spinner {
+  display: block;
+  position: absolute;
+  top: 13px;
+  right: 4px;
+  width: 16px;
+  height: 16px;
+  animation: spin 1000ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
