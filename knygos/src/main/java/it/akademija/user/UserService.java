@@ -21,6 +21,8 @@ import it.akademija.role.Role;
 
 @Service
 public class UserService implements UserDetailsService {
+	
+//	private UserDAO userDao;
 	@Autowired
 	private UserDAO userDao;
 	

@@ -17,7 +17,7 @@ public class FirstUser {
 	UserService userService;
 
 	/**
-	 * Add first users (ADMIN, MANAGER, USER) to the User repository for testing
+	 * Add first users (ADMIN, READER) to the User repository for testing
 	 * purposes
 	 * 
 	 * @throws Exception
@@ -32,8 +32,8 @@ public class FirstUser {
 			UserDTO firstAdmin = new UserDTO("ADMIN", "admin@admin.lt", "admin@admin.lt",
 					"admin@admin.lt");
 
-			UserDTO firstUser = new UserDTO("USER", 
-					"user@user.lt", "user@user.lt", "user@user.lt");
+			UserDTO firstUser = new UserDTO("READER", 
+					"reader@reader.lt", "reader@reader.lt", "reader@reader.lt");
 
 			userService.createUser(firstAdmin);
 			userService.createUser(firstUser);
