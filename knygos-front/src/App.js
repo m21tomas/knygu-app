@@ -1,13 +1,13 @@
-import React, { useEffect, useReducer, useState } from "react";
+import React, { useEffect, useState, useReducer } from "react";
 import { useLocation, Link } from 'react-router-dom';
 import { Switch, Route, Redirect } from "react-router-dom";
 import AuthContext from './components/05Services/AuthContext';
-// import AdminCanteenContext from './components/06Services/AdminCanteenContext';
+import AdminBookCategoryContext from './components/05Services/AdminCanteenContext';
 import apiEndpoint from './components/05Services/endpoint';
 import CommonErrorHandler from './components/05Services/CommonErrorHandler';
 import Login from './components/02Login/LoginContainer';
 import Admin from './components/04Admin/AdminContainer';
-// import CanteenContainer from './components/03Main/CanteenContainer';
+import BooksContainer from './components/03Main/BooksContainer';
 import AdminNavBar from './components/01Navigation/AdminNavBar';
 import NotFound from "./components/02Login/NotFound";
 // import AdminAddMenu from "./components/03Main/AdminAddMenu";
@@ -56,6 +56,7 @@ const reducer = (state, action) => {
 
 function App() {
   const [state, dispatch] = useReducer(reducer, initState);
+  const [canteenState, setCanteenState] = useState()
 
   useEffect(() => {
     if (state.isAuthenticated === null) {
@@ -98,7 +99,7 @@ function App() {
       case "ADMIN":
         return (
           <AuthContext.Provider value={{ state, dispatch }}>
-            {/* <AdminCanteenContext.Provider value={{ canteenState, setCanteenState }}> */}
+            <AdminBookCategoryContext.Provider value={{ canteenState, setCanteenState }}>
               <CommonErrorHandler>
                 <div className="container-fluid px-0">
                   <AdminNavBar>
@@ -108,7 +109,7 @@ function App() {
 
                       <Route exact path="/users" component={Admin} />
 
-                      {/* <Route exact path="/canteen" component={CanteenContainer} /> */}
+                      <Route exact path="/books" component={BooksContainer} />
 
                       {/* <Route exact path="/addMenu/:id" component={AdminAddMenu}/> */}
 
@@ -117,7 +118,7 @@ function App() {
                   </AdminNavBar>
                 </div>
               </CommonErrorHandler>
-            {/* </AdminCanteenContext.Provider> */}
+            </AdminBookCategoryContext.Provider>
           </AuthContext.Provider>
         );
       case "READER":
